@@ -14,19 +14,6 @@ $(window).resize(function () {
 });
 
 $(document).ready(function(){
-//
-//$("button").click(function(){
-//	if($("#noentry").css("display") == "none")
-//		$("#noentry").fadeIn("slow");
-//	else
-//		$("#noentry").fadeOut("slow");
-//	$("#cheese").animate({height:"150px", width:"150px",left:"200", top:"200"})
-//});
-//alert("cheese");
-//$(document.body).append($(document.createElement("div")).attr("id","cheese").attr("style","width: 100px; height: 100px; position: absolute; left: 0px; top: 0px; background-color: blue; display: block;"));
-//
-//alert("cheesed");
-//});
 
 Raphael.fn.teamBox = function (x,y)
 {
@@ -82,23 +69,6 @@ f1a.click(function () {
 	f1d.stop().animate(animf1d[view], 1000);
 	view = 1 - view;
 });
-
-
-
-//var el = paper.teamBox(40, 40).attr({fill: "#fff", "fill-opacity": 0, stroke: "#fff", "stroke-width": 2}), elattrs = [{x: 140, fill: "#f00", "fill-opacity": 1}, {x: 40, fill: "#fff", "fill-opacity": 0}],now = 1;
-//paper.teamBox(90, 40).click(function () {
-//	el.stop().animate(elattrs[+(now = !now)], 1000);
-//	f1a.stop().animate(elattrs[+(now = !now)], 1000);
-//});
-
-//paper.path("M20,189.5c0-20 40,20 40,0");
-//paper.path("M120,189.5c0-20 40,20 40,0");
-//var el1 = paper.path("M20,189.5c0-20 40,20 40,0").attr({fill: "none", stroke: "#00f", "stroke-width": 2}),
-//elattrs2 = [{path: "M120,189.5c0-20 40,20 40,0"}, {path: "M20,189.5c0-20 40,20 40,0c"}],
-//now = 1;
-//paper.teamBox(90, 190).node.onclick = function () {
-//	el1.stop().animate(elattrs2[+(now = !now)], 1000);
-//};
 
 });
 
