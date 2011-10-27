@@ -3,6 +3,14 @@ var laststate;
 
 var view = 1;
 
+var pageWidth = $(window).width();
+var pageHeight = $(window).height();
+
+$(window).resize(function () {
+	pageWidth = $(window).width();
+	pageHeight = $(window).height();
+});
+
 $(document).ready(function(){
 //
 //$("button").click(function(){
