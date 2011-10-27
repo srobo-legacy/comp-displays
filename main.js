@@ -3,12 +3,12 @@ var paper;
 var state;
 var laststate;
 
-var pageWidth = $(window).attr('screen').width;
-var pageHeight = $(window).attr('screen').height;
+var pageWidth = $(window).attr('screen').width - 1;
+var pageHeight = $(window).attr('screen').height - 1;
 
 $(window).resize(function () {
-	pageWidth = $(window).attr('screen').width;
-	pageHeight = $(window).attr('screen').height;
+	pageWidth = $(window).attr('screen').width - 1;
+	pageHeight = $(window).attr('screen').height - 1;
 	paper.setSize(pageWidth, pageHeight);
 	resizeScale();
 });
