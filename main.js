@@ -9,6 +9,7 @@ var pageHeight = $(window).height();
 $(window).resize(function () {
 	pageWidth = $(window).width();
 	pageHeight = $(window).height();
+	paper.setSize(pageWidth, pageHeight);
 	resizeScale();
 });
 
@@ -32,7 +33,7 @@ Raphael.fn.teamBox = function (x,y)
 	return this.rect(x,y, 25, 10 ).attr("fill","#00f").attr("stroke","#00f");
 }
 
-var paper = Raphael(0,0,600,600);
+var paper = Raphael(0,0,pageWidth,pageHeight);
 var f1a = paper.teamBox(10,10);
 var f1b = paper.teamBox(35,10);
 var f1c = paper.teamBox(10,20);
