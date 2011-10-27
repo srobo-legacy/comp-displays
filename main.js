@@ -9,6 +9,7 @@ var pageHeight = $(window).height();
 $(window).resize(function () {
 	pageWidth = $(window).width();
 	pageHeight = $(window).height();
+	resizeScale();
 });
 
 $(document).ready(function(){
@@ -99,3 +100,9 @@ f1a.click(function () {
 //};
 
 });
+
+function resizeScale()
+{
+	anim = {transform: "s" + (pageWidth/600)};
+//	f1a.stop().animate(anim,0);
+}
