@@ -23,7 +23,7 @@ Raphael.fn.scoreboard = function ()
 	var f1d = this.teamBox(border + width, border + height);
 	
 	var f2a = this.teamBox(border + 2*width + hspace, border);
-	var f2b = this.teamBox(border + 3* width + hspace, border);
+	var f2b = this.teamBox(border + 3*width + hspace, border);
 	var f2c = this.teamBox(border + 2*width + hspace, border + height);
 	var f2d = this.teamBox(border + 3*width + hspace, border + height);
 	
@@ -37,10 +37,20 @@ Raphael.fn.scoreboard = function ()
 	var f4c = this.teamBox(border + 6*width + 3*hspace, border + height);
 	var f4d = this.teamBox(border + 7*width + 3*hspace, border + height);
 	
-	var s1 = this.rect(50,60,50,20).attr("fill","#00f").attr("stroke","#00f");
-	var s2 = this.rect(210,60,50,20).attr("fill","#00f").attr("stroke","#00f");
+	var s1a = this.teamBox((4*width + hspace)/2 + border - width, border + 2*height + vspace);
+	var s1b = this.teamBox((4*width + hspace)/2 + border, border + 2*height + vspace);
+	var s1c = this.teamBox((4*width + hspace)/2 + border - width, border + 3*height + vspace);
+	var s1d = this.teamBox((4*width + hspace)/2 + border, border + 3*height + vspace);
+
+	var s2a = this.teamBox((4*width + hspace)/2 + border + 3*width + 2*hspace, border + 2*height + vspace);
+	var s2b = this.teamBox((4*width + hspace)/2 + border + 4*width + 2*hspace, border + 2*height + vspace);
+	var s2c = this.teamBox((4*width + hspace)/2 + border + 3*width + 2*hspace, border + 3*height + vspace);
+	var s2d = this.teamBox((4*width + hspace)/2 + border + 4*width + 2*hspace, border + 3*height + vspace);
 	
-	var fi = this.rect(130,110,50,20).attr("fill","#00f").attr("stroke","#00f");
+	var fia = this.teamBox((8*width + 3*hspace)/2 + border - width, border + 4*height + 2*vspace);
+	var fib = this.teamBox((8*width + 3*hspace)/2 + border, border + 4*height + 2*vspace);
+	var fic = this.teamBox((8*width + 3*hspace)/2 + border - width, border + 5*height + 2*vspace);
+	var fid = this.teamBox((8*width + 3*hspace)/2 + border, border + 5*height + 2*vspace);
 	
 	var l11 = this.path("M35,30L75,60");
 	var l21 = this.path("M115,30L75,60");
