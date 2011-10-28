@@ -73,11 +73,11 @@ Raphael.fn.scoreboard = function ()
 	
 	var clearRect = this.rect(0,0,pageWidth,pageHeight).attr("fill","#fff").attr("opacity","1").toBack();
 	
-	f1a.click(function() {expand1()});
-	f1b.click(function() {expand1()});
-	f1c.click(function() {expand1()});
-	f1d.click(function() {expand1()});
-	function expand1() {
+	f1a.click(function() {expand1(f1a,f1b,f1c,f1d)});
+	f1b.click(function() {expand1(f1a,f1b,f1c,f1d)});
+	f1c.click(function() {expand1(f1a,f1b,f1c,f1d)});
+	f1d.click(function() {expand1(f1a,f1b,f1c,f1d)});	
+	function expand1(a,b,c,d) {
 		if(view == 0)
 		{
 			clearRect.toFront().stop().animate({opacity: 1},1000);
@@ -87,18 +87,18 @@ Raphael.fn.scoreboard = function ()
 			clearRect.stop().animate({opacity: 0},1000,function(){clearRect.toBack();});
 		}
 		
-		var animf1a = [zone0p,{path: "M" + f1a.boxX + "," + f1a.boxY + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height), opacity: 1, stroke: "#00f"}];
-		var animf1b = [zone1p,{path: "M" + f1b.boxX + "," + f1b.boxY + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height), opacity: 1, stroke: "#00f"}];
-		var animf1c = [zone2p,{path: "M" + f1c.boxX + "," + f1c.boxY + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height), opacity: 1, stroke: "#00f"}];
-		var animf1d = [zone3p,{path: "M" + f1d.boxX + "," + f1d.boxY + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height), opacity: 1, stroke: "#00f"}];
-		f1a.toFront();
-		f1b.toFront();
-		f1c.toFront();
-		f1d.toFront();
-		f1a.stop().animate(animf1a[view], 1000);
-		f1b.stop().animate(animf1b[view], 1000);
-		f1c.stop().animate(animf1c[view], 1000);
-		f1d.stop().animate(animf1d[view], 1000);
+		var anima = [zone0p,{path: "M" + a.boxX + "," + a.boxY + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height), opacity: 1, stroke: "#00f"}];
+		var animb = [zone1p,{path: "M" + b.boxX + "," + b.boxY + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height), opacity: 1, stroke: "#00f"}];
+		var animc = [zone2p,{path: "M" + c.boxX + "," + c.boxY + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height), opacity: 1, stroke: "#00f"}];
+		var animd = [zone3p,{path: "M" + d.boxX + "," + d.boxY + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height), opacity: 1, stroke: "#00f"}];
+		a.toFront();
+		b.toFront();
+		c.toFront();
+		d.toFront();
+		a.stop().animate(anima[view], 1000);
+		b.stop().animate(animb[view], 1000);
+		c.stop().animate(animc[view], 1000);
+		d.stop().animate(animd[view], 1000);
 		view = 1 - view;
 	}
 }
