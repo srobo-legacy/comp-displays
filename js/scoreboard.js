@@ -5,13 +5,6 @@ var hspace = pageWidth * (30/310);
 var vspace = pageWidth * (30/310);
 var vborder = pageHeight/2 - (6*height + 2*vspace)/2;
 
-width = 25;
-height = 10;
-hborder = 10;
-vborder = 10;
-hspace = 30;
-vspace = 30;
-	
 Raphael.fn.teamBox = function (x,y)
 {
 	return this.path("M" + x + "," + y + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height)).attr("fill","#00f").attr("stroke","#00f");
