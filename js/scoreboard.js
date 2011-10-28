@@ -45,7 +45,11 @@ Raphael.fn.scoreboard = function ()
 	var zone3p = {path: "M900,450 l-400,0 50,-50 300,0 50,50", fill: "#fff", stroke: "#000"};
 	var zone4p = {path: "M500,450 l0,-400 50,50 0,300 -50,50", fill: "#fff", stroke: "#000"};
 	
-	f1a.click(function () {
+	f1a.click(function() {expand1()});
+	f1b.click(function() {expand1()});
+	f1c.click(function() {expand1()});
+	f1d.click(function() {expand1()});
+	function expand1() {
 		var animf1a = [zone1p,{path: "M10,10 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
 		var animf1b = [zone2p,{path: "M35,10 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
 		var animf1c = [zone3p,{path: "M10,20 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
@@ -59,7 +63,7 @@ Raphael.fn.scoreboard = function ()
 		f1c.stop().animate(animf1c[view], 1000);
 		f1d.stop().animate(animf1d[view], 1000);
 		view = 1 - view;
-	});
+	}
 }
 
 paper.scoreboard();
