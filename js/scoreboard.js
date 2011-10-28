@@ -1,29 +1,41 @@
+var width = pageWidth * (25/310);
+var height = pageWidth * (10/310);
+var border = pageWidth * (10/310);
+var hspace = pageWidth * (30/310);
+var vspace = pageWidth * (30/310);
+
+width = 25;
+height = 10;
+border = 10;
+hspace = 30;
+vspace = 30;
+	
 Raphael.fn.teamBox = function (x,y)
 {
-	return this.path("M" + x + "," + y + " l25,0 0,10 -25,0 0,-10").attr("fill","#00f").attr("stroke","#00f");
+	return this.path("M" + x + "," + y + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height)).attr("fill","#00f").attr("stroke","#00f");
 }
 
 Raphael.fn.scoreboard = function ()
 {
-	var f1a = this.teamBox(10,10);
-	var f1b = this.teamBox(35,10);
-	var f1c = this.teamBox(10,20);
-	var f1d = this.teamBox(35,20);
+	var f1a = this.teamBox(border, border);
+	var f1b = this.teamBox(border + width, border);
+	var f1c = this.teamBox(border, border + height);
+	var f1d = this.teamBox(border + width, border + height);
 	
-	var f2a = this.teamBox(90,10);
-	var f2b = this.teamBox(115,10);
-	var f2c = this.teamBox(90,20);
-	var f2d = this.teamBox(115,20);
+	var f2a = this.teamBox(border + 2*width + hspace, border);
+	var f2b = this.teamBox(border + 3* width + hspace, border);
+	var f2c = this.teamBox(border + 2*width + hspace, border + height);
+	var f2d = this.teamBox(border + 3*width + hspace, border + height);
 	
-	var f3a = this.teamBox(170,10);
-	var f3b = this.teamBox(195,10);
-	var f3c = this.teamBox(170,20);
-	var f3d = this.teamBox(195,20);
+	var f3a = this.teamBox(border + 4*width + 2*hspace, border);
+	var f3b = this.teamBox(border + 5*width + 2*hspace, border);
+	var f3c = this.teamBox(border + 4*width + 2*hspace, border + height);
+	var f3d = this.teamBox(border + 5*width + 2*hspace, border + height);
 	
-	var f4a = this.teamBox(250,10);
-	var f4b = this.teamBox(275,10);
-	var f4c = this.teamBox(250,20);
-	var f4d = this.teamBox(275,20);
+	var f4a = this.teamBox(border + 6*width + 3*hspace, border);
+	var f4b = this.teamBox(border + 7*width + 3*hspace, border);
+	var f4c = this.teamBox(border + 6*width + 3*hspace, border + height);
+	var f4d = this.teamBox(border + 7*width + 3*hspace, border + height);
 	
 	var s1 = this.rect(50,60,50,20).attr("fill","#00f").attr("stroke","#00f");
 	var s2 = this.rect(210,60,50,20).attr("fill","#00f").attr("stroke","#00f");
