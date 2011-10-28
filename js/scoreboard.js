@@ -68,11 +68,22 @@ Raphael.fn.scoreboard = function ()
 	var zone3p = {path: "M" + (zoneposx + zonelengthL) + "," + (zoneposy + zonelengthL) + " l" + (-zonelengthL) + ",0 " + (zonewidth) + "," + (-zonewidth) + " " + (zonelengthS) + ",0 " + (zonewidth) + "," + (zonewidth), fill: "#fff", stroke: "#000"};
 	var zone4p = {path: "M" + (zoneposx) + "," + (zoneposy + zonelengthL) + " l0," + (-zonelengthL) + " " + (zonewidth) + "," + (zonewidth) + " 0," + (zonelengthS) + " " + (-zonewidth) + "," + (zonewidth), fill: "#fff", stroke: "#000"};
 	
+	var clearRect = this.rect(0,0,pageWidth,pageHeight).attr("fill","#fff").attr("opacity","1").toBack();
+	
 	f1a.click(function() {expand1()});
 	f1b.click(function() {expand1()});
 	f1c.click(function() {expand1()});
 	f1d.click(function() {expand1()});
 	function expand1() {
+		if(view == 0)
+		{
+			clearRect.toFront().stop().animate({opacity: 1},1000);
+		}
+		else
+		{
+			clearRect.stop().animate({opacity: 0},1000,function(){clearRect.toBack();});
+		}
+		
 		var animf1a = [zone1p,{path: "M10,10 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
 		var animf1b = [zone2p,{path: "M35,10 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
 		var animf1c = [zone3p,{path: "M10,20 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
