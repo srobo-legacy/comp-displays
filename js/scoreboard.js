@@ -52,13 +52,13 @@ Raphael.fn.scoreboard = function ()
 	var fic = this.teamBox((8*width + 3*hspace)/2 + border - width, border + 5*height + 2*vspace);
 	var fid = this.teamBox((8*width + 3*hspace)/2 + border, border + 5*height + 2*vspace);
 	
-	var l11 = this.path("M35,30L75,60");
-	var l21 = this.path("M115,30L75,60");
-	var l32 = this.path("M195,30L235,60");
-	var l42 = this.path("M275,30L235,60");
+	var l11 = this.path("M" + (border + width) + "," + (border + 2*height) + "L" + ((4*width + hspace)/2 + border) + "," + (border + 2*height + vspace));
+	var l21 = this.path("M" + (border + 3*width + hspace) + "," + (border + 2*height) + "L" + ((4*width + hspace)/2 + border) + "," + (border + 2*height + vspace));
+	var l32 = this.path("M" + (border + 5*width + 2*hspace) + "," + (border + 2*height) + "L" + ((4*width + hspace)/2 + border + 4*width + 2*hspace) + "," + (border + 2*height + vspace));
+	var l42 = this.path("M" + (border + 7*width + 3*hspace) + "," + (border + 2*height) + "L" + ((4*width + hspace)/2 + border + 4*width + 2*hspace) + "," + (border + 2*height + vspace));
 	
-	var l1i = this.path("M75,80L155,110");
-	var l2i = this.path("M235,80L155,110");
+	var l1i = this.path("M" + ((4*width + hspace)/2 + border) + "," + (border + 4*height + vspace) + "L" + ((8*width + 3*hspace)/2 + border) + "," + (border + 4*height + 2*vspace));
+	var l2i = this.path("M" + ((4*width + hspace)/2 + border + 4*width + 2*hspace) + "," + (border + 4*height + vspace) + "L" + ((8*width + 3*hspace)/2 + border) + "," + (border + 4*height + 2*vspace));
 	
 	var view = 0;
 	
