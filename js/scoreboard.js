@@ -1,6 +1,6 @@
 Raphael.fn.teamBox = function (x,y)
 {
-	return this.rect(x,y, 25, 10 ).attr("fill","#00f").attr("stroke","#00f");
+	return this.path("M" + x + "," + y + " l25,0 0,10 -25,0 0,-10").attr("fill","#00f").attr("stroke","#00f");
 }
 
 Raphael.fn.scoreboard = function ()
