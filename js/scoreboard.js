@@ -46,10 +46,10 @@ Raphael.fn.scoreboard = function ()
 	var zone4p = {path: "M500,450 l0,-400 50,50 0,300 -50,50", fill: "#fff", stroke: "#000"};
 	
 	f1a.click(function () {
-		var animf1a = [{x: 10, y: 10, width: 25, height: 10, transform: "r0", fill: "#00f"},{x: 0, y: 0, width: 250, height: 100, transform: "r360", fill: "#fff"}];
-		var animf1b = [{x: 35, y: 10, width: 25, height: 10, transform: "r0"},{x: 250, y: 0, width: 250, height: 100, transform: "r360"}];
-		var animf1c = [{x: 10, y: 20, width: 25, height: 10, transform: "r0"},{x: 0, y: 100, width: 250, height: 100, transform: "r360"}];
-		var animf1d = [{x: 35, y: 20, width: 25, height: 10, transform: "r0"},{x: 250, y: 100, width: 250, height: 100, transform: "r360"}];
+		var animf1a = [zone1p,{path: "M10,10 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
+		var animf1b = [zone2p,{path: "M35,10 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
+		var animf1c = [zone3p,{path: "M10,20 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
+		var animf1d = [zone4p,{path: "M35,20 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
 		f1a.toFront();
 		f1b.toFront();
 		f1c.toFront();
