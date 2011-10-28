@@ -40,10 +40,16 @@ Raphael.fn.scoreboard = function ()
 	
 	var view = 0;
 	
-	var zone1p = {path: "M500,50 l400,0 -50,50 -300,0 -50,-50", fill: "#fff", stroke: "#000"};
-	var zone2p = {path: "M900,50 l0,400 -50,-50 0,-300 50,-50", fill: "#fff", stroke: "#000"};
-	var zone3p = {path: "M900,450 l-400,0 50,-50 300,0 50,50", fill: "#fff", stroke: "#000"};
-	var zone4p = {path: "M500,450 l0,-400 50,50 0,300 -50,50", fill: "#fff", stroke: "#000"};
+	var zonelengthL = 0.8*pageHeight;
+	var zonewidth = 0.1*pageHeight;
+	var zonelengthS = zonelengthL - 2*zonewidth;
+	var zoneposx = pageWidth/2 - zonelengthL/2;
+	var zoneposy = pageHeight/2 - zonelengthL/2;
+	
+	var zone1p = {path: "M" + (zoneposx) + "," + (zoneposy) + " l" + (zonelengthL) + ",0 " + (-zonewidth) + "," + (zonewidth) + " " + (-zonelengthS) + ",0 " + (-zonewidth) + "," + (-zonewidth), fill: "#fff", stroke: "#000"};
+	var zone2p = {path: "M" + (zoneposx + zonelengthL) + "," + (zoneposy) + " l0," + zonelengthL + " " + (-zonewidth) + "," + (-zonewidth) + " 0," + (-zonelengthS) + " " + (zonewidth) + "," + (-zonewidth), fill: "#fff", stroke: "#000"};
+	var zone3p = {path: "M" + (zoneposx + zonelengthL) + "," + (zoneposy + zonelengthL) + " l" + (-zonelengthL) + ",0 " + (zonewidth) + "," + (-zonewidth) + " " + (zonelengthS) + ",0 " + (zonewidth) + "," + (zonewidth), fill: "#fff", stroke: "#000"};
+	var zone4p = {path: "M" + (zoneposx) + "," + (zoneposy + zonelengthL) + " l0," + (-zonelengthL) + " " + (zonewidth) + "," + (zonewidth) + " 0," + (zonelengthS) + " " + (-zonewidth) + "," + (zonewidth), fill: "#fff", stroke: "#000"};
 	
 	f1a.click(function() {expand1()});
 	f1b.click(function() {expand1()});
