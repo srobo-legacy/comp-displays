@@ -1,12 +1,14 @@
 var width = pageWidth * (25/310);
 var height = pageWidth * (10/310);
-var border = pageWidth * (10/310);
+var hborder = pageWidth * (10/310);
 var hspace = pageWidth * (30/310);
 var vspace = pageWidth * (30/310);
+var vborder = pageHeight/2 - (6*height + 2*vspace)/2;
 
 width = 25;
 height = 10;
-border = 10;
+hborder = 10;
+vborder = 10;
 hspace = 30;
 vspace = 30;
 	
@@ -17,48 +19,48 @@ Raphael.fn.teamBox = function (x,y)
 
 Raphael.fn.scoreboard = function ()
 {
-	var f1a = this.teamBox(border, border);
-	var f1b = this.teamBox(border + width, border);
-	var f1c = this.teamBox(border, border + height);
-	var f1d = this.teamBox(border + width, border + height);
+	var f1a = this.teamBox(hborder, vborder);
+	var f1b = this.teamBox(hborder + width, vborder);
+	var f1c = this.teamBox(hborder, vborder + height);
+	var f1d = this.teamBox(hborder + width, vborder + height);
 	
-	var f2a = this.teamBox(border + 2*width + hspace, border);
-	var f2b = this.teamBox(border + 3*width + hspace, border);
-	var f2c = this.teamBox(border + 2*width + hspace, border + height);
-	var f2d = this.teamBox(border + 3*width + hspace, border + height);
+	var f2a = this.teamBox(hborder + 2*width + hspace, vborder);
+	var f2b = this.teamBox(hborder + 3*width + hspace, vborder);
+	var f2c = this.teamBox(hborder + 2*width + hspace, vborder + height);
+	var f2d = this.teamBox(hborder + 3*width + hspace, vborder + height);
 	
-	var f3a = this.teamBox(border + 4*width + 2*hspace, border);
-	var f3b = this.teamBox(border + 5*width + 2*hspace, border);
-	var f3c = this.teamBox(border + 4*width + 2*hspace, border + height);
-	var f3d = this.teamBox(border + 5*width + 2*hspace, border + height);
+	var f3a = this.teamBox(hborder + 4*width + 2*hspace, vborder);
+	var f3b = this.teamBox(hborder + 5*width + 2*hspace, vborder);
+	var f3c = this.teamBox(hborder + 4*width + 2*hspace, vborder + height);
+	var f3d = this.teamBox(hborder + 5*width + 2*hspace, vborder + height);
 	
-	var f4a = this.teamBox(border + 6*width + 3*hspace, border);
-	var f4b = this.teamBox(border + 7*width + 3*hspace, border);
-	var f4c = this.teamBox(border + 6*width + 3*hspace, border + height);
-	var f4d = this.teamBox(border + 7*width + 3*hspace, border + height);
+	var f4a = this.teamBox(hborder + 6*width + 3*hspace, vborder);
+	var f4b = this.teamBox(hborder + 7*width + 3*hspace, vborder);
+	var f4c = this.teamBox(hborder + 6*width + 3*hspace, vborder + height);
+	var f4d = this.teamBox(hborder + 7*width + 3*hspace, vborder + height);
 	
-	var s1a = this.teamBox((4*width + hspace)/2 + border - width, border + 2*height + vspace);
-	var s1b = this.teamBox((4*width + hspace)/2 + border, border + 2*height + vspace);
-	var s1c = this.teamBox((4*width + hspace)/2 + border - width, border + 3*height + vspace);
-	var s1d = this.teamBox((4*width + hspace)/2 + border, border + 3*height + vspace);
+	var s1a = this.teamBox((4*width + hspace)/2 + hborder - width, vborder + 2*height + vspace);
+	var s1b = this.teamBox((4*width + hspace)/2 + hborder, vborder + 2*height + vspace);
+	var s1c = this.teamBox((4*width + hspace)/2 + hborder - width, vborder + 3*height + vspace);
+	var s1d = this.teamBox((4*width + hspace)/2 + hborder, vborder + 3*height + vspace);
 
-	var s2a = this.teamBox((4*width + hspace)/2 + border + 3*width + 2*hspace, border + 2*height + vspace);
-	var s2b = this.teamBox((4*width + hspace)/2 + border + 4*width + 2*hspace, border + 2*height + vspace);
-	var s2c = this.teamBox((4*width + hspace)/2 + border + 3*width + 2*hspace, border + 3*height + vspace);
-	var s2d = this.teamBox((4*width + hspace)/2 + border + 4*width + 2*hspace, border + 3*height + vspace);
+	var s2a = this.teamBox((4*width + hspace)/2 + hborder + 3*width + 2*hspace, vborder + 2*height + vspace);
+	var s2b = this.teamBox((4*width + hspace)/2 + hborder + 4*width + 2*hspace, vborder + 2*height + vspace);
+	var s2c = this.teamBox((4*width + hspace)/2 + hborder + 3*width + 2*hspace, vborder + 3*height + vspace);
+	var s2d = this.teamBox((4*width + hspace)/2 + hborder + 4*width + 2*hspace, vborder + 3*height + vspace);
 	
-	var fia = this.teamBox((8*width + 3*hspace)/2 + border - width, border + 4*height + 2*vspace);
-	var fib = this.teamBox((8*width + 3*hspace)/2 + border, border + 4*height + 2*vspace);
-	var fic = this.teamBox((8*width + 3*hspace)/2 + border - width, border + 5*height + 2*vspace);
-	var fid = this.teamBox((8*width + 3*hspace)/2 + border, border + 5*height + 2*vspace);
+	var fia = this.teamBox((8*width + 3*hspace)/2 + hborder - width, vborder + 4*height + 2*vspace);
+	var fib = this.teamBox((8*width + 3*hspace)/2 + hborder, vborder + 4*height + 2*vspace);
+	var fic = this.teamBox((8*width + 3*hspace)/2 + hborder - width, vborder + 5*height + 2*vspace);
+	var fid = this.teamBox((8*width + 3*hspace)/2 + hborder, vborder + 5*height + 2*vspace);
 	
-	var l11 = this.path("M" + (border + width) + "," + (border + 2*height) + "L" + ((4*width + hspace)/2 + border) + "," + (border + 2*height + vspace));
-	var l21 = this.path("M" + (border + 3*width + hspace) + "," + (border + 2*height) + "L" + ((4*width + hspace)/2 + border) + "," + (border + 2*height + vspace));
-	var l32 = this.path("M" + (border + 5*width + 2*hspace) + "," + (border + 2*height) + "L" + ((4*width + hspace)/2 + border + 4*width + 2*hspace) + "," + (border + 2*height + vspace));
-	var l42 = this.path("M" + (border + 7*width + 3*hspace) + "," + (border + 2*height) + "L" + ((4*width + hspace)/2 + border + 4*width + 2*hspace) + "," + (border + 2*height + vspace));
+	var l11 = this.path("M" + (hborder + width) + "," + (vborder + 2*height) + "L" + ((4*width + hspace)/2 + hborder) + "," + (vborder + 2*height + vspace));
+	var l21 = this.path("M" + (hborder + 3*width + hspace) + "," + (vborder + 2*height) + "L" + ((4*width + hspace)/2 + hborder) + "," + (vborder + 2*height + vspace));
+	var l32 = this.path("M" + (hborder + 5*width + 2*hspace) + "," + (vborder + 2*height) + "L" + ((4*width + hspace)/2 + hborder + 4*width + 2*hspace) + "," + (vborder + 2*height + vspace));
+	var l42 = this.path("M" + (hborder + 7*width + 3*hspace) + "," + (vborder + 2*height) + "L" + ((4*width + hspace)/2 + hborder + 4*width + 2*hspace) + "," + (vborder + 2*height + vspace));
 	
-	var l1i = this.path("M" + ((4*width + hspace)/2 + border) + "," + (border + 4*height + vspace) + "L" + ((8*width + 3*hspace)/2 + border) + "," + (border + 4*height + 2*vspace));
-	var l2i = this.path("M" + ((4*width + hspace)/2 + border + 4*width + 2*hspace) + "," + (border + 4*height + vspace) + "L" + ((8*width + 3*hspace)/2 + border) + "," + (border + 4*height + 2*vspace));
+	var l1i = this.path("M" + ((4*width + hspace)/2 + hborder) + "," + (vborder + 4*height + vspace) + "L" + ((8*width + 3*hspace)/2 + hborder) + "," + (vborder + 4*height + 2*vspace));
+	var l2i = this.path("M" + ((4*width + hspace)/2 + hborder + 4*width + 2*hspace) + "," + (vborder + 4*height + vspace) + "L" + ((8*width + 3*hspace)/2 + hborder) + "," + (vborder + 4*height + 2*vspace));
 	
 	var view = 0;
 	
