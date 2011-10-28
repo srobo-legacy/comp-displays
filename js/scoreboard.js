@@ -76,7 +76,38 @@ Raphael.fn.scoreboard = function ()
 	f1a.click(function() {expand1(f1a,f1b,f1c,f1d)});
 	f1b.click(function() {expand1(f1a,f1b,f1c,f1d)});
 	f1c.click(function() {expand1(f1a,f1b,f1c,f1d)});
-	f1d.click(function() {expand1(f1a,f1b,f1c,f1d)});	
+	f1d.click(function() {expand1(f1a,f1b,f1c,f1d)});
+	
+	f2a.click(function() {expand1(f2a,f2b,f2c,f2d)});
+	f2b.click(function() {expand1(f2a,f2b,f2c,f2d)});
+	f2c.click(function() {expand1(f2a,f2b,f2c,f2d)});
+	f2d.click(function() {expand1(f2a,f2b,f2c,f2d)});
+	
+	f3a.click(function() {expand1(f3a,f3b,f3c,f3d)});
+	f3b.click(function() {expand1(f3a,f3b,f3c,f3d)});
+	f3c.click(function() {expand1(f3a,f3b,f3c,f3d)});
+	f3d.click(function() {expand1(f3a,f3b,f3c,f3d)});
+	
+	f4a.click(function() {expand1(f4a,f4b,f4c,f4d)});
+	f4b.click(function() {expand1(f4a,f4b,f4c,f4d)});
+	f4c.click(function() {expand1(f4a,f4b,f4c,f4d)});
+	f4d.click(function() {expand1(f4a,f4b,f4c,f4d)});
+	
+	s1a.click(function() {expand1(s1a,s1b,s1c,s1d)});
+	s1b.click(function() {expand1(s1a,s1b,s1c,s1d)});
+	s1c.click(function() {expand1(s1a,s1b,s1c,s1d)});
+	s1d.click(function() {expand1(s1a,s1b,s1c,s1d)});
+	
+	s2a.click(function() {expand1(s2a,s2b,s2c,s2d)});
+	s2b.click(function() {expand1(s2a,s2b,s2c,s2d)});
+	s2c.click(function() {expand1(s2a,s2b,s2c,s2d)});
+	s2d.click(function() {expand1(s2a,s2b,s2c,s2d)});
+	
+	fia.click(function() {expand1(fia,fib,fic,fid)});
+	fib.click(function() {expand1(fia,fib,fic,fid)});
+	fic.click(function() {expand1(fia,fib,fic,fid)});
+	fid.click(function() {expand1(fia,fib,fic,fid)});
+	
 	function expand1(a,b,c,d) {
 		if(view == 0)
 		{
