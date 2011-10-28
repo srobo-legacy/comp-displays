@@ -63,10 +63,10 @@ Raphael.fn.scoreboard = function ()
 	var zoneposx = pageWidth/2 - zonelengthL/2;
 	var zoneposy = pageHeight/2 - zonelengthL/2;
 	
-	var zone1p = {path: "M" + (zoneposx) + "," + (zoneposy) + " l" + (zonelengthL) + ",0 " + (-zonewidth) + "," + (zonewidth) + " " + (-zonelengthS) + ",0 " + (-zonewidth) + "," + (-zonewidth), fill: "#fff", stroke: "#000"};
-	var zone2p = {path: "M" + (zoneposx + zonelengthL) + "," + (zoneposy) + " l0," + zonelengthL + " " + (-zonewidth) + "," + (-zonewidth) + " 0," + (-zonelengthS) + " " + (zonewidth) + "," + (-zonewidth), fill: "#fff", stroke: "#000"};
-	var zone3p = {path: "M" + (zoneposx + zonelengthL) + "," + (zoneposy + zonelengthL) + " l" + (-zonelengthL) + ",0 " + (zonewidth) + "," + (-zonewidth) + " " + (zonelengthS) + ",0 " + (zonewidth) + "," + (zonewidth), fill: "#fff", stroke: "#000"};
-	var zone4p = {path: "M" + (zoneposx) + "," + (zoneposy + zonelengthL) + " l0," + (-zonelengthL) + " " + (zonewidth) + "," + (zonewidth) + " 0," + (zonelengthS) + " " + (-zonewidth) + "," + (zonewidth), fill: "#fff", stroke: "#000"};
+	var zone1p = {path: "M" + (zoneposx) + "," + (zoneposy) + " l" + (zonelengthL) + ",0 " + (-zonewidth) + "," + (zonewidth) + " " + (-zonelengthS) + ",0 " + (-zonewidth) + "," + (-zonewidth), opacity: 0.5, stroke: "#000"};
+	var zone2p = {path: "M" + (zoneposx + zonelengthL) + "," + (zoneposy) + " l0," + zonelengthL + " " + (-zonewidth) + "," + (-zonewidth) + " 0," + (-zonelengthS) + " " + (zonewidth) + "," + (-zonewidth), opacity: 0.5, stroke: "#000"};
+	var zone3p = {path: "M" + (zoneposx + zonelengthL) + "," + (zoneposy + zonelengthL) + " l" + (-zonelengthL) + ",0 " + (zonewidth) + "," + (-zonewidth) + " " + (zonelengthS) + ",0 " + (zonewidth) + "," + (zonewidth), opacity: 0.5, stroke: "#000"};
+	var zone4p = {path: "M" + (zoneposx) + "," + (zoneposy + zonelengthL) + " l0," + (-zonelengthL) + " " + (zonewidth) + "," + (zonewidth) + " 0," + (zonelengthS) + " " + (-zonewidth) + "," + (zonewidth), opacity: 0.5, stroke: "#000"};
 	
 	var clearRect = this.rect(0,0,pageWidth,pageHeight).attr("fill","#fff").attr("opacity","1").toBack();
 	
@@ -84,10 +84,10 @@ Raphael.fn.scoreboard = function ()
 			clearRect.stop().animate({opacity: 0},1000,function(){clearRect.toBack();});
 		}
 		
-		var animf1a = [zone1p,{path: "M10,10 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
-		var animf1b = [zone2p,{path: "M35,10 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
-		var animf1c = [zone3p,{path: "M10,20 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
-		var animf1d = [zone4p,{path: "M35,20 l25,0 0,10 -25,0 0,-10", fill: "#00f", stroke: "#00f"}];
+		var animf1a = [zone1p,{path: "M10,10 l25,0 0,10 -25,0 0,-10", opacity: 1, stroke: "#00f"}];
+		var animf1b = [zone2p,{path: "M35,10 l25,0 0,10 -25,0 0,-10", opacity: 1, stroke: "#00f"}];
+		var animf1c = [zone3p,{path: "M10,20 l25,0 0,10 -25,0 0,-10", opacity: 1, stroke: "#00f"}];
+		var animf1d = [zone4p,{path: "M35,20 l25,0 0,10 -25,0 0,-10", opacity: 1, stroke: "#00f"}];
 		f1a.toFront();
 		f1b.toFront();
 		f1c.toFront();
