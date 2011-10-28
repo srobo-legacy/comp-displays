@@ -38,7 +38,12 @@ Raphael.fn.scoreboard = function ()
 	var l1i = this.path("M75,80L155,110");
 	var l2i = this.path("M235,80L155,110");
 	
-	var view = 1;
+	var view = 0;
+	
+	var zone1p = {path: "M500,50 l400,0 -50,50 -300,0 -50,-50", fill: "#fff", stroke: "#000"};
+	var zone2p = {path: "M900,50 l0,400 -50,-50 0,-300 50,-50", fill: "#fff", stroke: "#000"};
+	var zone3p = {path: "M900,450 l-400,0 50,-50 300,0 50,50", fill: "#fff", stroke: "#000"};
+	var zone4p = {path: "M500,450 l0,-400 50,50 0,300 -50,50", fill: "#fff", stroke: "#000"};
 	
 	f1a.click(function () {
 		var animf1a = [{x: 10, y: 10, width: 25, height: 10, transform: "r0", fill: "#00f"},{x: 0, y: 0, width: 250, height: 100, transform: "r360", fill: "#fff"}];
