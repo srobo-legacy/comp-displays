@@ -7,7 +7,10 @@ var vborder = pageHeight/2 - (6*height + 2*vspace)/2;
 
 Raphael.fn.teamBox = function (x,y)
 {
-	return this.path("M" + x + "," + y + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height)).attr("fill","#00f").attr("stroke","#00f");
+	var a = this.path("M" + x + "," + y + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height)).attr("fill","#00f").attr("stroke","#00f");
+	a.boxX = x;
+	a.boxY = y;
+	return a;
 }
 
 Raphael.fn.scoreboard = function ()
@@ -84,10 +87,10 @@ Raphael.fn.scoreboard = function ()
 			clearRect.stop().animate({opacity: 0},1000,function(){clearRect.toBack();});
 		}
 		
-		var animf1a = [zone1p,{path: "M10,10 l25,0 0,10 -25,0 0,-10", opacity: 1, stroke: "#00f"}];
-		var animf1b = [zone2p,{path: "M35,10 l25,0 0,10 -25,0 0,-10", opacity: 1, stroke: "#00f"}];
-		var animf1c = [zone3p,{path: "M10,20 l25,0 0,10 -25,0 0,-10", opacity: 1, stroke: "#00f"}];
-		var animf1d = [zone4p,{path: "M35,20 l25,0 0,10 -25,0 0,-10", opacity: 1, stroke: "#00f"}];
+		var animf1a = [zone1p,{path: "M" + f1a.boxX + "," + f1a.boxY + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height), opacity: 1, stroke: "#00f"}];
+		var animf1b = [zone2p,{path: "M" + f1b.boxX + "," + f1b.boxY + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height), opacity: 1, stroke: "#00f"}];
+		var animf1c = [zone3p,{path: "M" + f1c.boxX + "," + f1c.boxY + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height), opacity: 1, stroke: "#00f"}];
+		var animf1d = [zone4p,{path: "M" + f1d.boxX + "," + f1d.boxY + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height), opacity: 1, stroke: "#00f"}];
 		f1a.toFront();
 		f1b.toFront();
 		f1c.toFront();
