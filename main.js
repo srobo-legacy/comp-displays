@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 paper = Raphael(0,0,pageWidth,pageHeight);
 
-$.getScript("./js/scoreboard.js");
+$.getScript("./js/league.js");
 $.getScript("./js/no_entry.js");
 });
 
