@@ -13,7 +13,7 @@ Raphael.fn.teamBox = function (x,y)
 	return a;
 }
 
-Raphael.fn.scoreboard = function ()
+Raphael.fn.league = function ()
 {
 	var f1a = this.teamBox(hborder, vborder);
 	var f1b = this.teamBox(hborder + width, vborder);
@@ -132,6 +132,26 @@ Raphael.fn.scoreboard = function ()
 		d.stop().animate(animd[view], 1000);
 		view = 1 - view;
 	}
+	var set = this.set().push(f1a,f1b,f1c,f1d,
+				f2a,f2b,f2c,f2d,
+				f3a,f3b,f3c,f3d,
+				f4a,f4b,f4c,f4d,
+				s1a,s1b,s1c,s1d,
+				s2a,s2b,s2c,s2d,
+				fia,fib,fic,fid,
+				l11,l21,l32,l42,
+				l1i,l2i);
+
+	set.hide = function()
+	{
+		this.animate({opacity: 0},1000);
+	}
+	set.show = function()
+	{
+		this.animate({opacity: 1},1000);
+	}
+	return set;
 }
 
-paper.scoreboard();
+globLeague = paper.league();
+globLeague.hide();
