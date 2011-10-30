@@ -36,3 +36,39 @@ function resizeScale()
 	anim = {transform: "s" + (pageWidth/600)};
 //	f1a.stop().animate(anim,0);
 }
+
+function updateState(a)
+{
+	if(a.state == state)
+	{
+		return;
+	}
+	laststate = state;
+	state = a.state;
+	switch(laststate)
+	{
+		case "Score":	globScore.hide();
+				break;
+		case "League":	globLeague.hide();
+				break;
+		case "No Entry":globNoEntry.hide();
+				break;
+		case "Match":	globMatch.hide();
+				break;
+		default:		//Do Nothing
+				break;
+	}
+	switch(state)
+	{
+		case "Score":	globScore.show();
+				break;
+		case "League":	globLeague.show();
+				break;
+		case "No Entry":globNoEntry.show();
+				break;
+		case "Match":	globMatch.show();
+				break;
+		default:		//Do Nothing
+				break;
+	}	
+}
