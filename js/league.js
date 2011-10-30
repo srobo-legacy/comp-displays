@@ -7,7 +7,7 @@ var vborder = pageHeight/2 - (6*height + 2*vspace)/2;
 
 Raphael.fn.teamBox = function (x,y)
 {
-	var a = this.path("M" + x + "," + y + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height)).attr("fill","#00f").attr("stroke","#00f");
+	var a = this.path("M" + x + "," + y + " l" + (width) + ",0 0," + (height) + " " + (-width) + ",0 0," + (-height)).attr("fill","#00f").attr("stroke","#00f").attr("stroke-width",0);
 	a.boxX = x;
 	a.boxY = y;
 	return a;
