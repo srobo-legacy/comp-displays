@@ -148,7 +148,7 @@ Raphael.fn.league = function ()
 	}
 	set.show = function()
 	{
-		this.animate({opacity: 1},1000);
+		this.animate({opacity: 1},1000,function(){this.toFront();});
 	}
 	return set;
 }
