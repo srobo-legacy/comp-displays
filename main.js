@@ -11,6 +11,8 @@ var paper;
 var state;
 var laststate;
 
+var globScore, globLeague, globNoEntry;
+
 var pageWidth = $(window).attr('screen').width - 1;
 var pageHeight = $(window).attr('screen').height - 1;
 
