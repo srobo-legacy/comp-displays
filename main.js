@@ -1,5 +1,13 @@
 var paper;
 
+/*
+ * String
+ * Possible states:
+ * 	Score
+ * 	League
+ * 	No Entry
+ * 	Match
+ */
 var state;
 var laststate;
 
