@@ -4,7 +4,7 @@ var matchTime;
 Raphael.fn.match = function()
 {
 	var set = this.set();
-	var line = this.path("M" + (pageWidth/50) + "," + (pageHeight/5) + " l" + (pageWidth*48/50) + ",0").attr("stroke-width","10").attr("stroke-linecap","round").attr("stroke","#00f");
+	var line = this.path("M" + (pageWidth/50) + "," + (pageHeight/4) + " l" + (pageWidth*48/50) + ",0").attr("stroke-width","10").attr("stroke-linecap","round").attr("stroke","#00f");
 	var time = this.matchTime();
 	var team = this.matchTeam();
 	
