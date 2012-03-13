@@ -31,6 +31,7 @@ $.getScript("./js/match.js");
 $.getScript("./js/league.js");
 $.getScript("./js/no_entry.js");
 $.getScript("./js/score.js");
+$.getScript("./js/webdis.js");
 });
 
 function resizeScale()
