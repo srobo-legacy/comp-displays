@@ -11,7 +11,7 @@ var paper;
 var state;
 var laststate;
 
-var globScore, globLeague, globNoEntry, globMatch;
+var globReg, globScore, globLeague, globNoEntry, globMatch;
 
 var pageWidth = $(window).attr('screen').width - 1;
 var pageHeight = $(window).attr('screen').height - 1;
@@ -29,6 +29,7 @@ paper = Raphael(0,0,pageWidth,pageHeight);
 
 $.getScript("./js/match.js");
 $.getScript("./js/league.js");
+$.getScript("./js/register.js");
 $.getScript("./js/no_entry.js");
 $.getScript("./js/score.js");
 $.getScript("./js/webdis.js");
@@ -50,6 +51,8 @@ function updateState(a)
 	state = a.state;
 	switch(laststate)
 	{
+		case "Register":globReg.hide();
+				break;
 		case "Score":	globScore.hide();
 				break;
 		case "League":	globLeague.hide();
@@ -63,6 +66,8 @@ function updateState(a)
 	}
 	switch(state)
 	{
+		case "Register":globReg.show();
+				break;
 		case "Score":	globScore.show();
 				break;
 		case "League":	globLeague.show();
